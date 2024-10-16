@@ -1,0 +1,17 @@
+public const string ReleaseDateFormat = " yyyy-MM-dd";
+
+bool isValidDate = DateTime.TryParseExact(model.ReleasedOn, ReleaseDateFormat, CultureInfo.CurrentCulture, DateTimeStyles.None, out DateTime date);
+
+if (!isValidDate)
+{
+	ModelState.AddModelError(nameof(model.ReleasedOn),"Date must be in yyyy-MM-dd format.");
+	return View(model);
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+private string? GetCurrentUserId()
+{
+    //return User.FindFirstValue("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier");
+    return User.FindFirstValue(ClaimTypes.NameIdentifier);
+}
+}

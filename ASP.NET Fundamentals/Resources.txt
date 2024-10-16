@@ -1,0 +1,3 @@
+http://svn.softuni.org/admin/svn/csharp-web/trunk/
+username: student
+password: student
