@@ -15,3 +15,7 @@ private string? GetCurrentUserId()
     return User.FindFirstValue(ClaimTypes.NameIdentifier);
 }
 }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[CallerMemberName] string methodName = ""  // returns calling method name as a string
+[CallerFilePath] string methodName = ""    // returns calling method path (c:\users\username\......)
